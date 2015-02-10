@@ -9,6 +9,6 @@ class Marker
   end
 
   def miss?
-    @hit = false
+     @hit = false
   end
 end
