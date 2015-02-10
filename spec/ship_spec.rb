@@ -8,7 +8,11 @@ describe Ship do
   end
 
   it 'should have a floating status when placed' do
-    expect(ship.floating_status).to eq true
+    expect(ship).to be_floating_status
+  end
+
+  it 'should not have a floating status when hit' do
+    expect(ship).to be_sink_status
   end
 
 end
