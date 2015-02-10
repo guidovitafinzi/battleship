@@ -1,14 +1,14 @@
 require 'ship'
 
 describe Ship do
+  let(:ship){Ship.new}
 
-  let(:ship) {Ship.new}
-
-  it 'is floating' do
-    expect(ship).to be_floating
+  it 'should have a length of 1' do
+    expect(ship.length).to eq 1
   end
 
-  it 'can be sinked' do
-    expect(ship.sinked!).not_to be_floating
+  it 'should have a floating status when placed' do
+    expect(ship.floating_status).to eq true
   end
+
 end

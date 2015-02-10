@@ -1,15 +1,12 @@
-class Ship
+class Ship 
 
-  def initialize
-    @floating = true
-  end
 
-  def floating?
-    @floating
-  end
+def length
+  1
+end
 
-  def sinked!
-    @floating = false
-    self
-  end
+def floating_status
+  true
+end
+
 end
