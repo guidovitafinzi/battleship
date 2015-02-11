@@ -1,5 +1,7 @@
 class Marker
 
+  attr_reader :hit
+
   def initialize
     @hit = true
   end
@@ -8,7 +10,8 @@ class Marker
     @hit
   end
 
-  def miss?
+  def missed?
      @hit = false
+     self
   end
 end

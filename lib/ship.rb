@@ -1,21 +1,22 @@
 class Ship 
 
+  attr_reader :le
+
   def initialize
-    @floating_status = true
+    @floating = true
   end
 
-def length
-  1
-end
+  def length
+    1
+  end
 
-def floating_status?
-  @floating_status
-  self
-end
+  def floating?
+    @floating
+    self
+  end
 
-def sink_status?
-  @floating_status = false
-  self
-end
-
+  def sinking?
+    @floating = false
+    self
+  end
 end
