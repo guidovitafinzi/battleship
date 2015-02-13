@@ -1,22 +1,30 @@
 class Ship 
 
-  attr_reader :le
+  SIZES = {destroyer: 2}
 
-  def initialize
-    @floating = true
+  attr_reader :length
+
+
+  def initialize(length = 3)
+    @length = length
+    @hits = 0
   end
 
-  def length
-    1
+  def self.destroyer
+    new SIZES[:destroyer]
   end
 
-  def floating?
-    @floating
-    self
+  def hit
+    @hits += 1
   end
 
-  def sinking?
-    @floating = false
-    self
+  def sunk?
+    hits >= length
+  end
+
+  private
+
+  def hits
+    @hits
   end
 end
